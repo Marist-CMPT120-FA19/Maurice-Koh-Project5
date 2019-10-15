@@ -1,0 +1,34 @@
+#Maurice Koh
+#zhi.koh1@marist.edu
+#Traffic Light With Functions
+
+from graphics import *
+
+#x= top part of the window
+#y= left side of the window, y increase when going down
+
+#Window Name
+win = GraphWin("Traffic Light") 
+
+def draw_traffic_light(x , y):
+    draw_light_body(x,y,40,80)
+    draw_lamp("green",63,23,9)
+    draw_lamp("yellow",43,23,9)
+    draw_lamp("red",23,23,9)
+    
+def draw_lamp(color , x , y , radius):
+    lamp = Circle(Point(x , y) , radius)
+    lamp.setFill(color)
+    lamp.draw(win)
+    
+def draw_light_body(x , y , length , width):
+    body = Rectangle(Point(x , y) , Point(width , length))
+    body.setFill("white")
+    body.draw(win)
+    
+def main():
+    draw_traffic_light(5 , 5)
+
+main()
+
+
